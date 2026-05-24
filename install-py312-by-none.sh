@@ -18,13 +18,13 @@ echo "📌 Kiến trúc phát hiện: $ARCH"
 if [ "$ARCH" = "x86_64" ] || [ "$ARCH" = "amd64" ] || [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
     echo "✅ Phát hiện hệ thống 64-bit"
     echo "📥 Đang tải và cài đặt Python 3.12 cho 64-bit..."
-
+    
     apt --fix-broken install -y
     check_error
-
+    
     curl -L https://raw.githubusercontent.com/Cacdume-wq/PYTHON-3.12/refs/heads/main/py312-64bit.deb -o py312.deb
     check_error
-
+    
     dpkg -i py312.deb
     check_error
 
@@ -32,13 +32,13 @@ if [ "$ARCH" = "x86_64" ] || [ "$ARCH" = "amd64" ] || [ "$ARCH" = "aarch64" ] ||
 elif [ "$ARCH" = "i386" ] || [ "$ARCH" = "i686" ] || [ "$ARCH" = "armv7l" ] || [ "$ARCH" = "armv8l" ]; then
     echo "✅ Phát hiện hệ thống 32-bit (ARM hoặc x86)"
     echo "📥 Đang tải và cài đặt Python 3.12 cho 32-bit..."
-
+    
     apt --fix-broken install -y
     check_error
-
+    
     curl -L https://raw.githubusercontent.com/Cacdume-wq/PYTHON-3.12/refs/heads/main/py312.deb -o py312.deb
     check_error
-
+    
     dpkg -i py312.deb
     check_error
 
