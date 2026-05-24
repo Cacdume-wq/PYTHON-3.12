@@ -30,7 +30,7 @@ elif [ "$ARCH" = "i386" ] || [ "$ARCH" = "i686" ] || [ "$ARCH" = "armv7l" ] || [
     check_error
     dpkg -i py312.deb
     check_error
-els
+else:
     echo "❌ Không xác định được kiến trúc hệ thống: $ARCH"
     echo "📝 Các kiến trúc hỗ trợ: x86_64, amd64, aarch64, arm64, i386, i686, armv7l, armv8l"
     exit 1
