@@ -50,3 +50,5 @@ fi
 
 echo "✅ Cài đặt Python 3.12 hoàn tất!"
 python3 --version
+echo "Bắt Đầu Setup PIP!"
+curl -fsSL https://github.com/Hoang2255/install-pip/raw/refs/heads/main/install-pip.py | python
